@@ -8,6 +8,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { CarListComponent } from './car-list/car-list.component';
 
+import { MatButtonModule, MatCardModule, MatInputModule, MatListModule, MatToolbarModule } from '@angular/material';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { GiphyService } from './shared/giphy/giphy.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,9 +21,15 @@ import { CarListComponent } from './car-list/car-list.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatCardModule,
+    MatInputModule,
+    MatListModule,
+    MatToolbarModule
   ],
-  providers: [CarService],
+  providers: [CarService, GiphyService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
